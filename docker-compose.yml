@@ -1,0 +1,12 @@
+services:
+  llmware-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      LLMWARE_DEMO_MODEL_NAME: bling-answer-tool
+    volumes:
+      - llmware-data:/opt/app-root/src/llmware_data
+
+volumes:
+  llmware-data:
